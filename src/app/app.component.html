@@ -15,5 +15,11 @@
 
   <button class="btn btn-warning" (click)="clearLog()">Clear log</button>
 
-  <p *ngFor="let i of logOfCount">{{ i + 1 }}. Hello World</p>
+  <p
+    *ngFor="let i of logOfCount"
+    [ngStyle]="{ 'background-color': i >= 4 ? 'green' : 'transparent' }"
+    [ngClass]="i >= 4 ? 'styleClass' : ''"
+  >
+    {{ i + 1 }}. Hello World
+  </p>
 </div>
