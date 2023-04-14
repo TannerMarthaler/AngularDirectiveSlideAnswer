@@ -1,5 +1,19 @@
 <div>
-  <h1>This is a starter project in Angular</h1>
-  <h2>Bootstrap has been added</h2>
-  <h2>To create a new project, fork it.</h2>
+  <button class="btn btn-primary" (click)="changeToggle()">
+    Display Details!
+  </button>
+  <p *ngIf="toggle">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quisquam
+    dicta, tempora ipsum autem explicabo dolor temporibus ipsa numquam laborum
+    obcaecati omnis tempore cupiditate voluptates necessitatibus optio sed
+    incidunt alias magni sunt. Molestiae iste earum est enim voluptate? Ipsa
+    iusto laboriosam quod repudiandae suscipit delectus ad officia, perferendis
+    adipisci architecto.
+  </p>
+
+  <hr />
+
+  <button class="btn btn-warning" (click)="clearLog()">Clear log</button>
+
+  <p *ngFor="let i of logOfCount">{{ i + 1 }}. Hello World</p>
 </div>
